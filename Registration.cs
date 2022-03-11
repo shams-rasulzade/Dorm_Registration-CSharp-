@@ -27,16 +27,30 @@ namespace Dorm_Registration
         
         private void Registration_Load(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand command = new SqlCommand("Select name from department", connection);
-            SqlDataReader read = command.ExecuteReader();
+            //Showing the departments
 
-            while(read.Read())
+            connection.Open();
+            SqlCommand department_command = new SqlCommand("Select name from department", connection);
+            SqlDataReader read_dep = department_command.ExecuteReader();
+
+            while(read_dep.Read())
             {
-                comboBox1.Items.Add(read[0].ToString());
+                comboBox1.Items.Add(read_dep[0].ToString());
             }
             connection.Close();
 
+
+
+            //Showing the available rooms
+
+            connection.Open();
+            SqlCommand room_command = new SqlCommand("Select no from room", connection);
+            SqlDataReader read_room = room_command.ExecuteReader();
+            while (read_room.Read())
+            {
+                comboBox2.Items.Add(read_room[0].ToString());
+            }
+            connection.Close();
         }
     }
 }
