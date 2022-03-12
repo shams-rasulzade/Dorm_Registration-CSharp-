@@ -30,25 +30,25 @@ namespace Dorm_Registration
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.name_textBox = new System.Windows.Forms.TextBox();
+            this.surname_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.email_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.birthday_textBox = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.phone_textBox = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.department_comboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.room_comboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.parent_textBox = new System.Windows.Forms.TextBox();
+            this.parent_phone_textBox = new System.Windows.Forms.MaskedTextBox();
+            this.address_textBox = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,23 +62,23 @@ namespace Dorm_Registration
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // textBox1
+            // name_textBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.textBox1.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 28);
-            this.textBox1.TabIndex = 1;
+            this.name_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.name_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_textBox.Location = new System.Drawing.Point(147, 29);
+            this.name_textBox.Name = "name_textBox";
+            this.name_textBox.Size = new System.Drawing.Size(207, 28);
+            this.name_textBox.TabIndex = 1;
             // 
-            // textBox2
+            // surname_textBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.textBox2.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 28);
-            this.textBox2.TabIndex = 3;
+            this.surname_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.surname_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surname_textBox.Location = new System.Drawing.Point(147, 63);
+            this.surname_textBox.Name = "surname_textBox";
+            this.surname_textBox.Size = new System.Drawing.Size(207, 28);
+            this.surname_textBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -90,14 +90,14 @@ namespace Dorm_Registration
             this.label2.TabIndex = 2;
             this.label2.Text = "Surname:";
             // 
-            // textBox3
+            // email_textBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.textBox3.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(147, 234);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 28);
-            this.textBox3.TabIndex = 5;
+            this.email_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.email_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textBox.Location = new System.Drawing.Point(147, 234);
+            this.email_textBox.Name = "email_textBox";
+            this.email_textBox.Size = new System.Drawing.Size(207, 28);
+            this.email_textBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -109,16 +109,16 @@ namespace Dorm_Registration
             this.label3.TabIndex = 4;
             this.label3.Text = "Phone:";
             // 
-            // maskedTextBox1
+            // birthday_textBox
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.maskedTextBox1.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(147, 97);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(207, 28);
-            this.maskedTextBox1.TabIndex = 6;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.birthday_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.birthday_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthday_textBox.Location = new System.Drawing.Point(147, 97);
+            this.birthday_textBox.Mask = "00/00/0000";
+            this.birthday_textBox.Name = "birthday_textBox";
+            this.birthday_textBox.Size = new System.Drawing.Size(207, 28);
+            this.birthday_textBox.TabIndex = 6;
+            this.birthday_textBox.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -130,15 +130,15 @@ namespace Dorm_Registration
             this.label4.TabIndex = 7;
             this.label4.Text = "Birthday:";
             // 
-            // maskedTextBox2
+            // phone_textBox
             // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.maskedTextBox2.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(147, 200);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(207, 28);
-            this.maskedTextBox2.TabIndex = 8;
+            this.phone_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.phone_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone_textBox.Location = new System.Drawing.Point(147, 200);
+            this.phone_textBox.Mask = "(999) 000-0000";
+            this.phone_textBox.Name = "phone_textBox";
+            this.phone_textBox.Size = new System.Drawing.Size(207, 28);
+            this.phone_textBox.TabIndex = 8;
             // 
             // label5
             // 
@@ -150,15 +150,15 @@ namespace Dorm_Registration
             this.label5.TabIndex = 9;
             this.label5.Text = "Department:";
             // 
-            // comboBox1
+            // department_comboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.comboBox1.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 28);
-            this.comboBox1.TabIndex = 10;
+            this.department_comboBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.department_comboBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.department_comboBox.FormattingEnabled = true;
+            this.department_comboBox.Location = new System.Drawing.Point(147, 131);
+            this.department_comboBox.Name = "department_comboBox";
+            this.department_comboBox.Size = new System.Drawing.Size(207, 28);
+            this.department_comboBox.TabIndex = 10;
             // 
             // label6
             // 
@@ -180,15 +180,15 @@ namespace Dorm_Registration
             this.label7.TabIndex = 12;
             this.label7.Text = "Room:";
             // 
-            // comboBox2
+            // room_comboBox
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.comboBox2.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(147, 166);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(85, 28);
-            this.comboBox2.TabIndex = 13;
+            this.room_comboBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.room_comboBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_comboBox.FormattingEnabled = true;
+            this.room_comboBox.Location = new System.Drawing.Point(147, 166);
+            this.room_comboBox.Name = "room_comboBox";
+            this.room_comboBox.Size = new System.Drawing.Size(85, 28);
+            this.room_comboBox.TabIndex = 13;
             // 
             // label8
             // 
@@ -220,33 +220,33 @@ namespace Dorm_Registration
             this.label10.TabIndex = 16;
             this.label10.Text = "Address:";
             // 
-            // textBox4
+            // parent_textBox
             // 
-            this.textBox4.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.textBox4.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(147, 268);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 28);
-            this.textBox4.TabIndex = 17;
+            this.parent_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.parent_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parent_textBox.Location = new System.Drawing.Point(147, 268);
+            this.parent_textBox.Name = "parent_textBox";
+            this.parent_textBox.Size = new System.Drawing.Size(207, 28);
+            this.parent_textBox.TabIndex = 17;
             // 
-            // maskedTextBox3
+            // parent_phone_textBox
             // 
-            this.maskedTextBox3.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.maskedTextBox3.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(147, 302);
-            this.maskedTextBox3.Mask = "(999) 000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(207, 28);
-            this.maskedTextBox3.TabIndex = 18;
+            this.parent_phone_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.parent_phone_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parent_phone_textBox.Location = new System.Drawing.Point(147, 302);
+            this.parent_phone_textBox.Mask = "(999) 000-0000";
+            this.parent_phone_textBox.Name = "parent_phone_textBox";
+            this.parent_phone_textBox.Size = new System.Drawing.Size(207, 28);
+            this.parent_phone_textBox.TabIndex = 18;
             // 
-            // richTextBox1
+            // address_textBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.richTextBox1.Location = new System.Drawing.Point(147, 341);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(207, 67);
-            this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "";
+            this.address_textBox.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.address_textBox.Location = new System.Drawing.Point(147, 341);
+            this.address_textBox.Name = "address_textBox";
+            this.address_textBox.Size = new System.Drawing.Size(207, 67);
+            this.address_textBox.TabIndex = 19;
+            this.address_textBox.Text = "";
             // 
             // button1
             // 
@@ -259,6 +259,7 @@ namespace Dorm_Registration
             this.button1.TabIndex = 20;
             this.button1.Text = "save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Registration
             // 
@@ -267,25 +268,25 @@ namespace Dorm_Registration
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(396, 493);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.address_textBox);
+            this.Controls.Add(this.parent_phone_textBox);
+            this.Controls.Add(this.parent_textBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.room_comboBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.department_comboBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.phone_textBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.birthday_textBox);
+            this.Controls.Add(this.email_textBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.surname_textBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.name_textBox);
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "Registration";
@@ -298,25 +299,25 @@ namespace Dorm_Registration
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox name_textBox;
+        private System.Windows.Forms.TextBox surname_textBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox email_textBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox birthday_textBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox phone_textBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox department_comboBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox room_comboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox parent_textBox;
+        private System.Windows.Forms.MaskedTextBox parent_phone_textBox;
+        private System.Windows.Forms.RichTextBox address_textBox;
         private System.Windows.Forms.Button button1;
     }
 }
