@@ -55,23 +55,36 @@ namespace Dorm_Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
-            connection.Open();
 
-            SqlCommand add_student_command = new SqlCommand("insert into student (name,surname,birthday,department,room,phone,email,parent,parent_phone,parent_address) values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
+            try
+            {
+                connection.Open();
 
-            add_student_command.Parameters.AddWithValue("@p1", name_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p2", surname_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p3", birthday_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p4", department_comboBox.Text);
-            add_student_command.Parameters.AddWithValue("@p5", room_comboBox.Text);
-            add_student_command.Parameters.AddWithValue("@p6", phone_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p7", email_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p8", parent_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p9", parent_phone_textBox.Text);
-            add_student_command.Parameters.AddWithValue("@p10", address_textBox.Text);
-            add_student_command.ExecuteNonQuery();
+                SqlCommand add_student_command = new SqlCommand("insert into student (name,surname,birthday,department,room,phone,email,parent,parent_phone,parent_address) values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
 
-            connection.Close();
+                add_student_command.Parameters.AddWithValue("@p1", name_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p2", surname_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p3", birthday_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p4", department_comboBox.Text);
+                add_student_command.Parameters.AddWithValue("@p5", room_comboBox.Text);
+                add_student_command.Parameters.AddWithValue("@p6", phone_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p7", email_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p8", parent_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p9", parent_phone_textBox.Text);
+                add_student_command.Parameters.AddWithValue("@p10", address_textBox.Text);
+                add_student_command.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("Added Succesfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR");
+            }
+            
+
+            
         }
     }
 }
