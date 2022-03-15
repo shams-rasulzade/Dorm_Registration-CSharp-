@@ -16,5 +16,12 @@ namespace Dorm_Registration
         {
             InitializeComponent();
         }
+
+        private void Department_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dorm_registrationDataSet.department' table. You can move, or remove it, as needed.
+            this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
+
+        }
     }
 }
