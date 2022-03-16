@@ -37,19 +37,19 @@ namespace Dorm_Registration
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.department_name_textBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dorm_registrationDataSet = new Dorm_Registration.dorm_registrationDataSet();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentTableAdapter = new Dorm_Registration.dorm_registrationDataSetTableAdapters.departmentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dorm_registrationDataSet = new Dorm_Registration.dorm_registrationDataSet();
+            this.departmentTableAdapter = new Dorm_Registration.dorm_registrationDataSetTableAdapters.departmentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,6 +61,7 @@ namespace Dorm_Registration
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -110,13 +111,13 @@ namespace Dorm_Registration
             this.label2.TabIndex = 5;
             this.label2.Text = "Department Name:";
             // 
-            // textBox2
+            // department_name_textBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(163, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 28);
-            this.textBox2.TabIndex = 6;
+            this.department_name_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.department_name_textBox.Location = new System.Drawing.Point(163, 64);
+            this.department_name_textBox.Name = "department_name_textBox";
+            this.department_name_textBox.Size = new System.Drawing.Size(203, 28);
+            this.department_name_textBox.TabIndex = 6;
             // 
             // dataGridView1
             // 
@@ -130,20 +131,6 @@ namespace Dorm_Registration
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(511, 298);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // dorm_registrationDataSet
-            // 
-            this.dorm_registrationDataSet.DataSetName = "dorm_registrationDataSet";
-            this.dorm_registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "department";
-            this.departmentBindingSource.DataSource = this.dorm_registrationDataSet;
-            // 
-            // departmentTableAdapter
-            // 
-            this.departmentTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -159,13 +146,27 @@ namespace Dorm_Registration
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "department";
+            this.departmentBindingSource.DataSource = this.dorm_registrationDataSet;
+            // 
+            // dorm_registrationDataSet
+            // 
+            this.dorm_registrationDataSet.DataSetName = "dorm_registrationDataSet";
+            this.dorm_registrationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentTableAdapter
+            // 
+            this.departmentTableAdapter.ClearBeforeFill = true;
+            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.department_name_textBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -181,8 +182,8 @@ namespace Dorm_Registration
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +197,7 @@ namespace Dorm_Registration
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox department_name_textBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private dorm_registrationDataSet dorm_registrationDataSet;
         private System.Windows.Forms.BindingSource departmentBindingSource;
