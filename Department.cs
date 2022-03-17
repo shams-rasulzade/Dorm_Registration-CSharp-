@@ -47,8 +47,46 @@ namespace Dorm_Registration
             catch (Exception)
             {
                 MessageBox.Show("ERROR Occured");
-
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                connection.Open();
+
+                SqlCommand delete_department_command = new SqlCommand("delete from Department where id=@p1", connection);
+                delete_department_command.Parameters.AddWithValue("@p1", department_id_textBox);
+                delete_department_command.ExecuteNonQuery();
+
+                connection.Close();
+
+                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
+                MessageBox.Show("Department Deleted");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR Occured");
+            }
+            
+        }
+
+        int choosen;
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id, department_name;
+
+            choosen = dataGridView1.SelectedCells[0].RowIndex;
+            id = dataGridView1.Rows[choosen].Cells[0].Value.ToString();
+            department_name = dataGridView1.Rows[choosen].Cells[1].Value.ToString();
+
+            department_id_textBox.Text = id;
+            department_name_textBox.Text = department_name;
+
+
         }
     }
 }
