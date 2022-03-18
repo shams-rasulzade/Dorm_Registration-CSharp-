@@ -88,5 +88,30 @@ namespace Dorm_Registration
 
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                connection.Open();
+
+                SqlCommand edit_department_command = new SqlCommand("update Deparment Set name=@p2 where id=@p1", connection);
+                edit_department_command.Parameters.AddWithValue("@p1", department_id_textBox);
+                edit_department_command.Parameters.AddWithValue("@p2", department_name_textBox);
+                edit_department_command.ExecuteNonQuery();
+
+                connection.Close();
+
+                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
+
+                MessageBox.Show("Department Edited");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR Occured");
+            }
+            
+        }
     }
 }

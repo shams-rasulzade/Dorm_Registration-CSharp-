@@ -83,12 +83,14 @@ namespace Dorm_Registration
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // department_id_textBox
             // 
             this.department_id_textBox.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.department_id_textBox.Location = new System.Drawing.Point(163, 17);
             this.department_id_textBox.Name = "department_id_textBox";
+            this.department_id_textBox.ReadOnly = true;
             this.department_id_textBox.Size = new System.Drawing.Size(203, 28);
             this.department_id_textBox.TabIndex = 3;
             // 
