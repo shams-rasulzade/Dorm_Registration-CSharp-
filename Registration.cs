@@ -86,5 +86,11 @@ namespace Dorm_Registration
 
             
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Department department_form = new Department();
+            department_form.Show();
+        }
     }
 }
