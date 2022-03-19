@@ -44,6 +44,7 @@ namespace Dorm_Registration
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dorm_registrationDataSet = new Dorm_Registration.dorm_registrationDataSet();
             this.departmentTableAdapter = new Dorm_Registration.dorm_registrationDataSetTableAdapters.departmentTableAdapter();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,6 +62,7 @@ namespace Dorm_Registration
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Add");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
@@ -72,6 +74,7 @@ namespace Dorm_Registration
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Delete");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
@@ -83,6 +86,7 @@ namespace Dorm_Registration
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Edit");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // department_id_textBox
@@ -208,5 +212,6 @@ namespace Dorm_Registration
         private dorm_registrationDataSetTableAdapters.departmentTableAdapter departmentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
