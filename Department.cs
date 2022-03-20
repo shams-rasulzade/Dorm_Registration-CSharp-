@@ -25,22 +25,18 @@ namespace Dorm_Registration
 
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-PE9P8LD;Initial Catalog=dorm_registration;Integrated Security=True");
-
+        MySqlConnection mySqlConnection = new MySqlConnection();
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             try
             {
-                connection.Open();
-
-                SqlCommand add_department_command = new SqlCommand("insert into Department (name) values (@p1)", connection);
+                SqlCommand add_department_command = new SqlCommand("insert into Department (name) values (@p1)", mySqlConnection.connection());
                 add_department_command.Parameters.AddWithValue("@p1", department_name_textBox.Text);
                 add_department_command.ExecuteNonQuery();
 
-                connection.Close();
 
-                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
+                mySqlConnection.connection().Close();                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
 
                 MessageBox.Show("Department Added");
             }
@@ -55,13 +51,11 @@ namespace Dorm_Registration
 
             try
             {
-                connection.Open();
-
-                SqlCommand delete_department_command = new SqlCommand("delete from Department where id=@p1", connection);
+                SqlCommand delete_department_command = new SqlCommand("delete from Department where id=@p1", mySqlConnection.connection());
                 delete_department_command.Parameters.AddWithValue("@p1", department_id_textBox);
                 delete_department_command.ExecuteNonQuery();
 
-                connection.Close();
+                mySqlConnection.connection().Close();
 
                 this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
                 MessageBox.Show("Department Deleted");
@@ -85,8 +79,6 @@ namespace Dorm_Registration
 
             department_id_textBox.Text = id;
             department_name_textBox.Text = department_name;
-
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -94,14 +86,12 @@ namespace Dorm_Registration
 
             try
             {
-                connection.Open();
-
-                SqlCommand edit_department_command = new SqlCommand("update Deparment Set name=@p2 where id=@p1", connection);
+                SqlCommand edit_department_command = new SqlCommand("update Deparment Set name=@p2 where id=@p1", mySqlConnection.connection());
                 edit_department_command.Parameters.AddWithValue("@p1", department_id_textBox);
                 edit_department_command.Parameters.AddWithValue("@p2", department_name_textBox);
                 edit_department_command.ExecuteNonQuery();
 
-                connection.Close();
+                mySqlConnection.connection().Close();
 
                 this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
 
@@ -111,7 +101,6 @@ namespace Dorm_Registration
             {
                 MessageBox.Show("ERROR Occured");
             }
-            
         }
     }
 }

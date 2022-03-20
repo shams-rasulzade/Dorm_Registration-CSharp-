@@ -57,6 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dorm_registrationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MySqlConnection.cs" />
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>

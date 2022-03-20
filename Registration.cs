@@ -17,40 +17,33 @@ namespace Dorm_Registration
         {
             InitializeComponent();
         }
-
-
-        SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-PE9P8LD;Initial Catalog=dorm_registration;Integrated Security=True");
-
-
-
-
         
+        MySqlConnection mySqlConnection = new MySqlConnection();
+
         private void Registration_Load(object sender, EventArgs e)
         {
             //Showing the departments
 
-            connection.Open();
-            SqlCommand department_command = new SqlCommand("Select name from department", connection);
+            SqlCommand department_command = new SqlCommand("Select name from department", mySqlConnection.connection());
             SqlDataReader read_dep = department_command.ExecuteReader();
 
             while(read_dep.Read())
             {
                 department_comboBox.Items.Add(read_dep[0].ToString());
             }
-            connection.Close();
+            mySqlConnection.connection().Close();
 
 
 
             //Showing the available rooms
 
-            connection.Open();
-            SqlCommand room_command = new SqlCommand("Select no from room where capacity!=present", connection);
+            SqlCommand room_command = new SqlCommand("Select no from room where capacity!=present", mySqlConnection.connection());
             SqlDataReader read_room = room_command.ExecuteReader();
             while (read_room.Read())
             {
                 room_comboBox.Items.Add(read_room[0].ToString());
             }
-            connection.Close();
+            mySqlConnection.connection().Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,9 +51,7 @@ namespace Dorm_Registration
 
             try
             {
-                connection.Open();
-
-                SqlCommand add_student_command = new SqlCommand("insert into student (name,surname,birthday,department,room,phone,email,parent,parent_phone,parent_address) values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
+                SqlCommand add_student_command = new SqlCommand("insert into student (name,surname,birthday,department,room,phone,email,parent,parent_phone,parent_address) values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", mySqlConnection.connection());
 
                 add_student_command.Parameters.AddWithValue("@p1", name_textBox.Text);
                 add_student_command.Parameters.AddWithValue("@p2", surname_textBox.Text);
@@ -74,7 +65,7 @@ namespace Dorm_Registration
                 add_student_command.Parameters.AddWithValue("@p10", address_textBox.Text);
                 add_student_command.ExecuteNonQuery();
 
-                connection.Close();
+                mySqlConnection.connection().Close();
 
                 MessageBox.Show("Added Succesfully");
             }
@@ -82,9 +73,6 @@ namespace Dorm_Registration
             {
                 MessageBox.Show("ERROR");
             }
-            
-
-            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
