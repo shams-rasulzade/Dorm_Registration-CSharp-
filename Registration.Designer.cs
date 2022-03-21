@@ -304,6 +304,9 @@ namespace Dorm_Registration
             this.Controls.Add(this.label2);
             this.Controls.Add(this.name_textBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);

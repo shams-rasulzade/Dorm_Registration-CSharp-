@@ -36,7 +36,9 @@ namespace Dorm_Registration
                 add_department_command.ExecuteNonQuery();
 
 
-                mySqlConnection.connection().Close();                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
+                mySqlConnection.connection().Close();
+
+                this.departmentTableAdapter.Fill(this.dorm_registrationDataSet.department);
 
                 MessageBox.Show("Department Added");
             }
