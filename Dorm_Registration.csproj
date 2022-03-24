@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dorm_registrationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dorm_registrationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dorm_registrationDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +105,17 @@
     </None>
     <None Include="dorm_registrationDataSet.xss">
       <DependentUpon>dorm_registrationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dorm_registrationDataSet1.xsc">
+      <DependentUpon>dorm_registrationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dorm_registrationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dorm_registrationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dorm_registrationDataSet1.xss">
+      <DependentUpon>dorm_registrationDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
