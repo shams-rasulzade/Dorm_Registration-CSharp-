@@ -60,20 +60,20 @@ namespace Dorm_Registration
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dorm_registrationDataSet1 = new Dorm_Registration.dorm_registrationDataSet1();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new Dorm_Registration.dorm_registrationDataSet1TableAdapters.studentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dorm_registrationDataSet1 = new Dorm_Registration.dorm_registrationDataSet1();
+            this.studentTableAdapter = new Dorm_Registration.dorm_registrationDataSet1TableAdapters.studentTableAdapter();
             this.date_label = new System.Windows.Forms.Label();
             this.time_label = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -306,20 +306,6 @@ namespace Dorm_Registration
             this.dataGridView1.Size = new System.Drawing.Size(443, 305);
             this.dataGridView1.TabIndex = 1;
             // 
-            // dorm_registrationDataSet1
-            // 
-            this.dorm_registrationDataSet1.DataSetName = "dorm_registrationDataSet1";
-            this.dorm_registrationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.dorm_registrationDataSet1;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -344,6 +330,20 @@ namespace Dorm_Registration
             this.roomDataGridViewTextBoxColumn.DataPropertyName = "room";
             this.roomDataGridViewTextBoxColumn.HeaderText = "room";
             this.roomDataGridViewTextBoxColumn.Name = "roomDataGridViewTextBoxColumn";
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.dorm_registrationDataSet1;
+            // 
+            // dorm_registrationDataSet1
+            // 
+            this.dorm_registrationDataSet1.DataSetName = "dorm_registrationDataSet1";
+            this.dorm_registrationDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // date_label
             // 
@@ -388,8 +388,8 @@ namespace Dorm_Registration
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dorm_registrationDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

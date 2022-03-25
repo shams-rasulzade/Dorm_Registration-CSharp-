@@ -52,6 +52,7 @@ namespace Dorm_Registration
             this.address_textBox = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.id_hidden_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,12 +277,23 @@ namespace Dorm_Registration
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // id_hidden_label
+            // 
+            this.id_hidden_label.AutoSize = true;
+            this.id_hidden_label.Font = new System.Drawing.Font("A1", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_hidden_label.Location = new System.Drawing.Point(48, 388);
+            this.id_hidden_label.Name = "id_hidden_label";
+            this.id_hidden_label.Size = new System.Drawing.Size(24, 20);
+            this.id_hidden_label.TabIndex = 22;
+            this.id_hidden_label.Text = "id";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(396, 493);
+            this.Controls.Add(this.id_hidden_label);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.address_textBox);
@@ -340,6 +352,7 @@ namespace Dorm_Registration
         private System.Windows.Forms.RichTextBox address_textBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label id_hidden_label;
     }
 }
 

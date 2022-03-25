@@ -51,6 +51,8 @@ namespace Dorm_Registration
 
             try
             {
+                //Save student info
+
                 SqlCommand add_student_command = new SqlCommand("insert into student (name,surname,birthday,department,room,phone,email,parent,parent_phone,parent_address) values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", mySqlConnection.connection());
 
                 add_student_command.Parameters.AddWithValue("@p1", name_textBox.Text);
@@ -68,6 +70,30 @@ namespace Dorm_Registration
                 mySqlConnection.connection().Close();
 
                 MessageBox.Show("Added Succesfully");
+
+
+                //Getting id
+                SqlCommand get_id_command = new SqlCommand("Select id from student", mySqlConnection.connection());
+                SqlDataReader read_id = get_id_command.ExecuteReader();
+
+                while(read_id.Read())
+                {
+                    id_hidden_label.Text = read_id[0].ToString();
+                }
+
+                mySqlConnection.connection();
+
+
+
+                //Saving loan
+                SqlCommand save_loan_command = new SqlCommand("Insert into loan (id, name,surname) values (@l1,@l2,@l3)", mySqlConnection.connection());
+
+                save_loan_command.Parameters.AddWithValue("@l1", id_hidden_label.Text);
+                save_loan_command.Parameters.AddWithValue("@l2", name_textBox.Text);
+                save_loan_command.Parameters.AddWithValue("@l3", surname_textBox.Text);
+                save_loan_command.ExecuteNonQuery();
+
+                mySqlConnection.connection().Close();
             }
             catch (Exception)
             {
