@@ -62,6 +62,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dorm_registrationDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dorm_registrationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dorm_registrationDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Loan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan.Designer.cs">
+      <DependentUpon>Loan.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Department.resx">
       <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan.resx">
+      <DependentUpon>Loan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -116,6 +130,17 @@
     </None>
     <None Include="dorm_registrationDataSet1.xss">
       <DependentUpon>dorm_registrationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dorm_registrationDataSet2.xsc">
+      <DependentUpon>dorm_registrationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dorm_registrationDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dorm_registrationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dorm_registrationDataSet2.xss">
+      <DependentUpon>dorm_registrationDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
